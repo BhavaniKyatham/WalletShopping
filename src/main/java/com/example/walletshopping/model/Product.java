@@ -9,35 +9,46 @@ import javax.persistence.Id;
 public class Product {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.TABLE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int productId;
 	private String productName;
-	private double productPrice;
+	private double ProductPrice;
+
 	private int productQuantity;
+
 	public int getProductId() {
 		return productId;
 	}
+
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
+
 	public String getProductName() {
 		return productName;
 	}
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
 	public double getProductPrice() {
-		return productPrice;
+
+		return ProductPrice;
 	}
+
 	public void setProductPrice(double productPrice) {
-		this.productPrice = productPrice;
+		this.ProductPrice = productPrice;
+
 	}
+
 	public int getProductQuantity() {
 		return productQuantity;
 	}
+
 	public void setProductQuantity(int productQuantity) {
 		this.productQuantity = productQuantity;
+
 	}
-	
-	
+
 }

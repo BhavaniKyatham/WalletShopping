@@ -22,9 +22,11 @@
         src/main/java/com/example/walletshopping/model/*.java,
         src/main/java/com/example/walletshopping/dao/*.java,
         src/main/java/com/example/walletshopping/dto/*.java,
+         src/main/java/com/example/walletshopping/dtos/*.java,
         src/main/java/com/example/walletshopping/controller/*.java,
         src/main/java/com/example/walletshopping/service/*.java,
         src/main/java/com/example/walletshopping/exceptions/*.java,
+          src/main/java/com/example/walletshopping/exception/*.java,
         src/main/java/com/example/walletshopping/service/*.java,
         src/main/java/com/example/walletshopping/WalletShoppingApplication.java
        
