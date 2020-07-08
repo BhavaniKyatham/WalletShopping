@@ -25,10 +25,9 @@ public class SwaggerConfig {
 				.paths(Predicates.not(PathSelectors.regex("/error.*"))).build().apiInfo(apiInfo());
 	}
 
-
-	private ApiInfo apiInfo() {            
-    	return new ApiInfo("WalletShopping", "wallet shopping system for rooms RESTful api documentation", "1", "terms",                  
-    			new Contact("Squad-2", "www.walletshopping.com", "support@walletshopping.com"), "license number", "lecence url", Collections.emptyList());     
-    }
+	private ApiInfo apiInfo() {
+		return new ApiInfo("WalletShopping", "wallet shopping system for rooms RESTful api documentation", "1", "terms",
+				new Contact("Squad-2", "www.walletshopping.com", "support@walletshopping.com"), "license number",
+				"lecence url", Collections.emptyList());
+	}
 }
-
