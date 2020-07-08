@@ -10,10 +10,18 @@ import com.example.walletshopping.model.CartProduct;
 @Repository
 public interface CartProductDao extends CrudRepository<CartProduct, Integer> {
 
+	/**
+	 * @param cartId
+	 * @return
+	 */
 	@Query(value="select p.product_id from product_cart p where p.cart_id=:cartId",nativeQuery = true)
 	int findProductIdByCartId(int cartId);
 	
 	
+	/**
+	 * @param cartId
+	 * @return
+	 */
 	@Query(value="select p.no_of_quantities from product_cart p where p.cart_id=:cartId",nativeQuery = true)
 	int findNoOfQuantiesBycartId(int cartId);
 

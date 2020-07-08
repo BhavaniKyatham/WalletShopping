@@ -21,6 +21,11 @@ public class CartController {
 	@Autowired
 	CartService cartService;
 		 
+	/**
+	 * @param cartProductDtolist
+	 * @param userId
+	 * @return responseEntity
+	 */
 	@PostMapping("/users/{userId}/cart")
 	public ResponseEntity<CartResponseDto> AddProductToCart( @RequestBody List<CartProductDto> cartProductDtolist,@PathVariable("userId") int  userId)
 	{

@@ -22,6 +22,13 @@ public class PurchaseController {
 	@Autowired
 	PurchaseService purchaseService;
 	
+	/**
+	 * @param userId
+	 * @param purchaseRequestDto
+	 * @return
+	 * @throws InsufficientAmountException
+	 * @throws InavalidCartIdException
+	 */
 	@PostMapping("users/{userId}/purchase")
 	public StatusRequestDto savePurchaseProductDetails(@PathVariable("userId")int userId, @RequestBody PurchaseRequestDto purchaseRequestDto) throws InsufficientAmountException, InavalidCartIdException {
 		StatusRequestDto errorresponse = new StatusRequestDto();
@@ -30,6 +37,10 @@ public class PurchaseController {
 		errorresponse.setMessage("your purchase is successfull");
 		return errorresponse;
 	}
+	/**
+	 * @param exception
+	 * @return responseEntity
+	 */
 	@ExceptionHandler(InsufficientAmountException.class)
 	public ResponseEntity<StatusRequestDto> exceptionHandler(InsufficientAmountException exception) {
 		StatusRequestDto errorresponse = new StatusRequestDto();
@@ -38,6 +49,10 @@ public class PurchaseController {
 		return new ResponseEntity<>(errorresponse, HttpStatus.BAD_REQUEST);
 	}
 	
+	/**
+	 * @param exception
+	 * @return responseEntity
+	 */
 	@ExceptionHandler(InavalidCartIdException.class)
 	public ResponseEntity<StatusRequestDto> exceptionHandler(InavalidCartIdException exception) {
 		StatusRequestDto errorresponse = new StatusRequestDto();

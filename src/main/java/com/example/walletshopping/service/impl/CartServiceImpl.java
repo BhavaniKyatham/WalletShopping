@@ -28,6 +28,9 @@ public class CartServiceImpl implements CartService {
 	CartProductDao cartProductDao;
 	
 	
+	/**
+	 *return cartresponsedto
+	 */
 	@Override
 	public CartResponseDto AddProductsToCart(List<CartProductDto> cartProductDtolist, int userId) {
 		Cart cart=new Cart();
@@ -45,6 +48,11 @@ public class CartServiceImpl implements CartService {
 		return cartresponsedto;
 	}
 
+	/**
+	 * @param cartProductDto
+	 * @param cartId
+	 * @return cartproduct
+	 */
 	private CartProduct getCartProduct(CartProductDto cartProductDto, int cartId) {
 
 		 CartProduct cartproduct= new CartProduct();

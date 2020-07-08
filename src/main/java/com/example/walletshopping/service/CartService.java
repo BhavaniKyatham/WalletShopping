@@ -7,6 +7,11 @@ import com.example.walletshopping.dtos.CartResponseDto;
 
 public interface CartService {
 
+	/**
+	 * @param cartProductDtolist
+	 * @param userId
+	 * @return CartResponseDto
+	 */
 	CartResponseDto AddProductsToCart(List<CartProductDto> cartProductDtolist, int userId);
 
 	
